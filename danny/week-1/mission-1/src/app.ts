@@ -61,10 +61,3 @@ form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
   addTodo(input.value);
 });
-
-input.addEventListener("keydown", (e: KeyboardEvent) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    addTodo(input.value);
-  }
-});

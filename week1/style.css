@@ -11,33 +11,35 @@ body {
   color: #111;
 }
 
-.wrapper {
+/* Block */
+.todo {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 40px 80px;
 }
 
-.title {
+/* Elements */
+.todo__title {
   text-align: center;
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 90px;
 }
 
-.input-section {
+.todo__input-section {
   width: 100%;
   max-width: 900px;
   margin: 0 auto 30px;
 }
 
-.top-line {
+.todo__divider {
   width: 100%;
   height: 3px;
   background: #d7dee8;
   margin-bottom: 18px;
 }
 
-.todo-input {
+.todo__input {
   display: block;
   width: 80%;
   max-width: 720px;
@@ -50,13 +52,13 @@ body {
   outline: none;
 }
 
-.todo-input::placeholder {
+.todo__input::placeholder {
   color: #d6dde7;
   font-style: italic;
   font-weight: 700;
 }
 
-.board {
+.todo__board {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -65,11 +67,11 @@ body {
   padding-top: 20px;
 }
 
-.column {
+.todo__column {
   flex: 1;
 }
 
-.column-title {
+.todo__column-title {
   width: fit-content;
   margin: 0 auto 42px;
   font-size: 34px;
@@ -78,11 +80,11 @@ body {
   padding-bottom: 6px;
 }
 
-.todo-list {
+.todo__list {
   list-style: none;
 }
 
-.todo-item {
+.todo__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,13 +94,13 @@ body {
   margin-bottom: 18px;
 }
 
-.todo-text {
+.todo__text {
   font-size: 38px;
   font-weight: 800;
   word-break: break-word;
 }
 
-.action-btn {
+.todo__button {
   border: none;
   background: #dbe3ef;
   color: #111;
@@ -108,32 +110,33 @@ body {
   cursor: pointer;
 }
 
-.action-btn:hover {
+.todo__button:hover {
   filter: brightness(0.95);
 }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .title {
+  .todo__title {
     font-size: 42px;
     margin-bottom: 60px;
   }
 
-  .todo-input {
+  .todo__input {
     width: 100%;
     font-size: 20px;
     height: 50px;
   }
 
-  .board {
+  .todo__board {
     flex-direction: column;
     gap: 40px;
   }
 
-  .todo-text {
+  .todo__text {
     font-size: 26px;
   }
 
-  .column-title {
+  .todo__column-title {
     font-size: 28px;
   }
 }

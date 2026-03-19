@@ -177,6 +177,28 @@
       });
       btn.classList.add('navbar__lang-btn--active');
     }
+
+    const i18n = {
+  ko: { menu: '고양이 친구들', download: '앱 다운로드', langLabel: '언어' },
+  en: { menu: 'Cat Friends',   download: 'Download App', langLabel: 'Lang'  },
+};  
+
+    function setLang(lang, btn) {
+      document.querySelectorAll('.navbar__lang-btn').forEach(b => {
+        b.classList.remove('navbar__lang-btn--active');
+      });
+      btn.classList.add('navbar__lang-btn--active');
+
+      document.querySelectorAll('.navbar__menu-item--text').forEach(el => {
+        el.textContent = i18n[lang].menu;
+      });
+      document.querySelectorAll('.navbar__btn--text').forEach(el => {
+        el.textContent = i18n[lang].download;
+      });
+      document.querySelectorAll('.navbar__lang span').forEach(el => {
+        el.textContent = i18n[lang].langLabel;
+      });
+    }
   </script>
 
 </body>

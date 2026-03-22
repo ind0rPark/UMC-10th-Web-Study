@@ -14,19 +14,11 @@ const addButton = addButtonElement;
 const todoList = todoListElement;
 const doneList = doneListElement;
 function isDuplicate(text) {
-    const todoTexts = todoList.querySelectorAll(".todo-item__text");
-    const doneTexts = doneList.querySelectorAll(".todo-item__text");
-    for (const item of todoTexts) {
-        if (item.textContent === text) {
-            return true;
-        }
-    }
-    for (const item of doneTexts) {
-        if (item.textContent === text) {
-            return true;
-        }
-    }
-    return false;
+    const texts = [
+        ...todoList.querySelectorAll(".todo-item__text"),
+        ...doneList.querySelectorAll(".todo-item__text"),
+    ];
+    return texts.some((item) => item.textContent === text);
 }
 function deleteItem(item) {
     item.remove();
